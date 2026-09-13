@@ -2,7 +2,12 @@
   "name": "livery",
   "displayName": "Livery",
   "description": "Give each workspace an exact, contrast-aware status bar color.",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "publisher": "andrewpey",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewpey/vscode-livery.git"
+  },
   "private": true,
   "engines": { "vscode": "^1.85.0" },
   "categories": ["Other"],
