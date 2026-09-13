@@ -1,0 +1,47 @@
+{
+  "name": "livery",
+  "displayName": "Livery",
+  "description": "Give each workspace an exact, contrast-aware status bar color.",
+  "version": "0.1.0",
+  "private": true,
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other"],
+  "main": "./out/extension.js",
+  "activationEvents": ["onStartupFinished"],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "test": "npm run build && node --test test/*.test.cjs",
+    "vscode:prepublish": "npm run build"
+  },
+  "contributes": {
+    "commands": [
+      { "command": "livery.chooseColor", "title": "Choose Color", "category": "Livery" },
+      { "command": "livery.randomColor", "title": "Random Color", "category": "Livery" },
+      { "command": "livery.reset", "title": "Reset", "category": "Livery" },
+      { "command": "livery.applyPreview", "title": "Apply Preview", "category": "Livery", "enablement": "resourceScheme == livery-preview" },
+      { "command": "livery.cancelPreview", "title": "Cancel Preview", "category": "Livery", "enablement": "resourceScheme == livery-preview" }
+    ],
+    "configuration": {
+      "title": "Livery",
+      "properties": {
+        "livery.baseColor": {
+          "type": "string",
+          "default": "",
+          "scope": "window",
+          "anyOf": [
+            { "enum": [""] },
+            { "format": "color-hex" }
+          ],
+          "pattern": "^(#[0-9a-fA-F]{6}|#[0-9a-fA-F]{3})?$",
+          "markdownDescription": "Workspace status bar color. Choose a color and save to apply."
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "~1.85.0",
+    "typescript": "~5.9.3"
+  }
+}
