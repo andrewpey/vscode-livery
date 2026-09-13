@@ -4,6 +4,7 @@
   "description": "Give each workspace an exact, contrast-aware status bar color.",
   "version": "1.0.0",
   "publisher": "andrewpey",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/andrewpey/vscode-livery.git"
