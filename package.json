@@ -1,6 +1,7 @@
 {
   "name": "livery",
   "displayName": "Livery",
+  "icon": "media/icon.png",
   "description": "Give each workspace an exact, contrast-aware status bar color.",
   "version": "1.0.0",
   "publisher": "andrewpey",
