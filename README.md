@@ -2,10 +2,10 @@
 
 A little color for each VS Code workspace, so you can tell projects apart at a glance.
 
-![Three VS Code windows with green, blue, and purple status bars](media/livery-hero.png)
+![Six VS Code windows unfolding into a stack with different status bar colors](media/livery-unfold.webp)
 
-There are plenty of great coloring extensions. I wanted something minimal that feels at home in VS Code's newer, island-style layout: a colored status bar with readable, subtly tinted text.
+**Livery** adds a colored status bar with readable, subtly tinted text that feels at home in VS Code's modern layout.
 
-Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **Livery: Choose Color**. Pick a preset or your own color, with a live preview. Your background stays exactly as chosen; Livery takes care of the text and hover colors.
+Open the Command Palette (`F1` / `Ctrl+Shift+P` / `Cmd+Shift+P`) and run **Livery: Choose Color**. Pick a preset or your own color, with a live preview. Your background stays exactly as chosen; Livery takes care of the text and hover colors.
 
 Try **Livery: Random Color** for inspiration, or **Livery: Reset** to clear it. Colors are saved per workspace.
