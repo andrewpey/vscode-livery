@@ -2,7 +2,7 @@
   "name": "livery",
   "displayName": "Livery",
   "icon": "media/icon.png",
-  "description": "Give each workspace an exact, contrast-aware status bar color.",
+  "description": "A little color for each VS Code workspace, so you can tell projects apart at a glance.",
   "version": "1.0.0",
   "publisher": "andrewpey",
   "license": "MIT",
