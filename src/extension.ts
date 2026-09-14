@@ -6,7 +6,11 @@ const palette = [
   ['Green', '#34845B'], ['Teal', '#168577'], ['Cyan', '#36AEC4'],
   ['Blue', '#3478C6'], ['Indigo', '#5854AD'], ['Purple', '#8956AE'],
   ['Magenta', '#B54B91'], ['Red', '#C44E52'], ['Orange', '#DD8438'],
-  ['Amber', '#D8A33C'], ['Yellow', '#E6D05A'], ['Olive', '#858B42']
+  ['Amber', '#D8A33C'], ['Yellow', '#E6D05A'], ['Olive', '#858B42'],
+  ['Fern', '#426B55'], ['Lagoon', '#34766F'], ['Glacier', '#9DC8D3'],
+  ['Denim', '#486D9B'], ['Dusk', '#969AC6'], ['Iris', '#B9A2CC'],
+  ['Rosewood', '#CB9CAF'], ['Clay', '#D99787'], ['Terracotta', '#BD7B52'],
+  ['Ochre', '#C7AD7C'], ['Butter', '#E9DDA6'], ['Moss', '#A5B58A']
 ];
 const managedKeys = ['statusBar.background', 'statusBar.foreground', 'statusBarItem.hoverBackground'];
 

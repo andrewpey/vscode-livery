@@ -91,7 +91,7 @@ test('QuickPick presets use SVG swatches with their exact HEX fill', async () =>
   const h = await host('folder', {'livery.baseColor': '#34845B'});
   await h.run('chooseColor');
   const presets = h.picked.filter(item => item.hex);
-  assert.equal(presets.length, 12);
+  assert.equal(presets.length, 24);
   for (const item of presets) {
     assert.ok(!item.label.includes('●'));
     const svg = require('node:fs').readFileSync(item.iconPath, 'utf8');
