@@ -17,6 +17,13 @@
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "workspace",
+    "status bar",
+    "color",
+    "workspace color",
+    "project color"
+  ],
   "main": "./out/extension.js",
   "activationEvents": [
     "onStartupFinished"
