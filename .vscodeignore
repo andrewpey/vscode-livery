@@ -4,3 +4,5 @@ node_modules/**
 .vscode/**
 tsconfig.json
 **/*.map
+.gitignore
+media/livery-unfold.webp
