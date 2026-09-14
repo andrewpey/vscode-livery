@@ -86,7 +86,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
       iconPath: vscode.Uri.joinPath(context.extensionUri, 'media', 'palette', `${hex.slice(1)}.svg`)
     }));
     items.push({ label: 'Custom Color...', description: current && !palette.some(([, hex]) => hex === current)
-      ? `${current} · Current` : 'Choose any RGB color' });
+      ? `${current}` : '' });
     let custom = false;
     await enqueue(async () => {
       const original = workspaceColors();
