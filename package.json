@@ -3,7 +3,7 @@
   "displayName": "Livery",
   "icon": "media/icon.png",
   "description": "A little color for each VS Code workspace, so you can tell projects apart at a glance.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "andrewpey",
   "license": "MIT",
   "repository": {
@@ -11,10 +11,16 @@
     "url": "https://github.com/andrewpey/vscode-livery.git"
   },
   "private": true,
-  "engines": { "vscode": "^1.85.0" },
-  "categories": ["Other"],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
   "main": "./out/extension.js",
-  "activationEvents": ["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "tsc",
@@ -23,11 +29,33 @@
   },
   "contributes": {
     "commands": [
-      { "command": "livery.chooseColor", "title": "Choose Color", "category": "Livery" },
-      { "command": "livery.randomColor", "title": "Random Color", "category": "Livery" },
-      { "command": "livery.reset", "title": "Reset", "category": "Livery" },
-      { "command": "livery.applyPreview", "title": "Apply Preview", "category": "Livery", "enablement": "resourceScheme == livery-preview" },
-      { "command": "livery.cancelPreview", "title": "Cancel Preview", "category": "Livery", "enablement": "resourceScheme == livery-preview" }
+      {
+        "command": "livery.chooseColor",
+        "title": "Choose Color",
+        "category": "Livery"
+      },
+      {
+        "command": "livery.randomColor",
+        "title": "Random Color",
+        "category": "Livery"
+      },
+      {
+        "command": "livery.reset",
+        "title": "Reset",
+        "category": "Livery"
+      },
+      {
+        "command": "livery.applyPreview",
+        "title": "Apply Preview",
+        "category": "Livery",
+        "enablement": "resourceScheme == livery-preview"
+      },
+      {
+        "command": "livery.cancelPreview",
+        "title": "Cancel Preview",
+        "category": "Livery",
+        "enablement": "resourceScheme == livery-preview"
+      }
     ],
     "configuration": {
       "title": "Livery",
@@ -37,8 +65,14 @@
           "default": "",
           "scope": "window",
           "anyOf": [
-            { "enum": [""] },
-            { "format": "color-hex" }
+            {
+              "enum": [
+                ""
+              ]
+            },
+            {
+              "format": "color-hex"
+            }
           ],
           "pattern": "^(#[0-9a-fA-F]{6}|#[0-9a-fA-F]{3})?$",
           "markdownDescription": "Workspace status bar color. Choose a color and save to apply."
