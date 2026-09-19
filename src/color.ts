@@ -104,7 +104,8 @@ export function deriveColors(base: string): Record<string, string> {
     hover = gamutMappedHex({ ...color, l: Math.max(0, Math.min(1, color.l + direction * delta)) });
     if (contrastRatio(hover, foreground) >= 4.5) { break; }
   }
-  return { 'statusBar.background': background, 'statusBar.foreground': foreground,
+  return { 'statusBar.background': background, 'statusBar.inactiveBackground': background + 'B3',
+    'statusBar.foreground': foreground,
     'statusBarItem.hoverBackground': hover };
 }
 

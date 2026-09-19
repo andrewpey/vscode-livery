@@ -12,7 +12,7 @@ const palette = [
   ['Rosewood', '#CB9CAF'], ['Clay', '#D99787'], ['Terracotta', '#BD7B52'],
   ['Ochre', '#C7AD7C'], ['Butter', '#E9DDA6'], ['Moss', '#A5B58A']
 ];
-const managedKeys = ['statusBar.background', 'statusBar.foreground', 'statusBarItem.hoverBackground'];
+const managedKeys = ['statusBar.background', 'statusBar.inactiveBackground', 'statusBar.foreground', 'statusBarItem.hoverBackground'];
 
 function requireWorkspace(): void {
   if (!vscode.workspace.workspaceFile && !vscode.workspace.workspaceFolders?.length) {

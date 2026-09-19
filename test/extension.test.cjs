@@ -129,7 +129,7 @@ test('malformed customizations are preserved and invalid base can be repaired', 
   assert.match(invalid.values['livery.baseColor'], /^#[A-F0-9]{6}$/);
 });
 
-for (const initial of [undefined, {}, {'statusBar.background':'#112233', 'editor.background':'#222222'}]) {
+for (const initial of [undefined, {}, {'statusBar.background':'#112233', 'statusBar.inactiveBackground':'#334455', 'editor.background':'#222222'}]) {
   test(`preview cancellation restores original token presence (${JSON.stringify(initial)})`, async () => {
     const h = await host('folder', {'workbench.colorCustomizations':initial});
     h.api.window.showQuickPick = async (items, options) => {

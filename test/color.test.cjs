@@ -35,6 +35,19 @@ test('foreground inherits hue with restrained chroma and preserves contrast', ()
   }
 });
 
+test('inactive background blends toward the shell in both dark and light themes', () => {
+  const hex = '#426B55';
+  const inactive = c.deriveColors(hex)['statusBar.inactiveBackground'];
+  const opacity = parseInt(inactive.slice(7), 16) / 255;
+  const base = c.hexToRgb(hex);
+  assert.ok(opacity >= .7 && opacity < 1);
+  for (const shell of ['#121314', '#FAFAFD']) {
+    const under = c.hexToRgb(shell);
+    const blended = base.map((channel, i) => channel * opacity + under[i] * (1 - opacity));
+    assert.ok(blended.every((channel, i) => shell === '#121314' ? channel < base[i] : channel > base[i]));
+  }
+});
+
 test('HEX validation and shorthand', () => {
   assert.equal(c.normalizeHex('#aBc'), '#AABBCC');
   for (const value of [null, 42, '#12345', '#12345678', 'red', '#GGGGGG', ' #123456']) {
@@ -49,6 +62,7 @@ test('conversion round trips and AA contrast over RGB grid', () => {
     assert.equal(c.rgbToHex(c.oklchToRgb(c.rgbToOklch(rgb))), hex);
     const derived = c.deriveColors(hex);
     assert.ok(c.contrastRatio(hex, derived['statusBar.foreground']) >= 4.5);
+
   }
   assert.equal(c.inSrgbGamut([1.1, 0, 0]), false);
 });
