@@ -3,7 +3,7 @@
   "displayName": "Livery",
   "icon": "media/icon.png",
   "description": "A little color for each VS Code workspace, so you can tell projects apart at a glance.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "andrewpey",
   "license": "MIT",
   "repository": {
